@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servbond | Commercial & Residential Cleaning in Calgary since 2007</title>
+<meta name="description" content="Servbond is a Calgary cleaning company founded in May 2007. Commercial and residential cleaning for gyms, medical clinics, dental offices, kitchens, warehouses and offices.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='3' y='9' width='20' height='20' rx='6' fill='none' stroke='%231d4843' stroke-width='5'/%3E%3Crect x='17' y='11' width='20' height='20' rx='6' fill='none' stroke='%23f0b928' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1d4843; --green-2:#2b605a; --green-deep:#10302c;
+  --gold:#f0b928; --gold-soft:#fbe7ad;
+  --paper:#f5f0e4; --paper-2:#ece4d1; --ink:#14211f; --mute:#5d6a66; --line:#d8cfba;
+  --serif:'Young Serif',Georgia,serif; --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green-2);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:15px 24px;border-radius:999px;transition:.25s;cursor:pointer;border:0;font-family:inherit}
+.btn-gold{background:var(--gold);color:var(--green-deep)}
+.btn-gold:hover{background:#ffcb45;transform:translateY(-2px)}
+.btn-line{border:1.5px solid currentColor}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+
+/* ===== Utility strip ===== */
+.strip{background:var(--green-deep);color:#cfdcd8;font-size:13.5px}
+.strip .wrap{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
+.strip b{color:var(--gold);font-weight:700}
+.strip span+span{margin-left:22px}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(245,240,228,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo svg{width:42px;height:42px}
+.logo-text{font-family:var(--serif);font-size:27px;color:var(--green);line-height:1}
+.logo-text small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-top:4px;font-weight:700}
+nav ul{display:flex;gap:34px;list-style:none;font-weight:600;font-size:15px}
+nav a{position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.25s}
+nav a:hover::after,nav a.on::after{width:100%}
+.hdr-cta{display:flex;align-items:center;gap:14px}
+.hdr-cta .btn{padding:12px 20px}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 8px}
+
+/* ===== Hero ===== */
+.hero{padding:64px 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.hero h1{font-size:clamp(44px,6vw,84px);color:var(--green-deep);margin:22px 0 26px}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.08em;height:.26em;background:var(--gold);z-index:-1;border-radius:3px}
+.hero p.lead{font-size:19px;color:var(--mute);max-width:520px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 0;max-width:560px}
+.hero-tags a{font-size:14px;font-weight:600;padding:8px 15px;border:1px solid var(--line);border-radius:999px;background:#fff;transition:.2s}
+.hero-tags a:hover{border-color:var(--green);background:var(--green);color:#fff}
+
+/* quote card */
+.quote{background:var(--green);color:#fff;border-radius:22px;padding:34px 32px 30px;position:relative;box-shadow:0 30px 60px -30px rgba(16,48,44,.55)}
+.quote h3{font-size:30px;margin-bottom:6px}
+.quote p.s{color:#bcd2cd;font-size:15px;margin-bottom:22px}
+.quote .ticket{position:absolute;top:-16px;right:26px;background:var(--gold);color:var(--green-deep);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:6px;transform:rotate(3deg)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#a9c2bd;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:15.5px;color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:12px 14px;outline:none;transition:.2s}
+.field select option{color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:rgba(255,255,255,.12)}
+.field textarea{resize:vertical;min-height:84px}
+.quote .btn{width:100%;justify-content:center;margin-top:6px}
+.quote .or{text-align:center;font-size:14px;color:#a9c2bd;margin-top:14px}
+.quote .or a{color:var(--gold);font-weight:700}
+.form-ok{display:none;background:rgba(240,185,40,.15);border:1px solid var(--gold);padding:12px;border-radius:10px;margin-top:12px;font-size:14.5px}
+
+/* hero photo band */
+.hero-band{margin-top:64px;position:relative;display:grid;grid-template-columns:2.2fr 1fr;gap:18px}
+.hb-main{position:relative;height:440px;clip-path:polygon(0 0,100% 0,100% 100%,7% 100%,0 82%);overflow:hidden;border-radius:0}
+.hb-main img{width:100%;height:100%;object-fit:cover}
+.hb-side{display:grid;grid-template-rows:1fr auto;gap:18px}
+.hb-side .ph{overflow:hidden;border-radius:0 0 0 70px}
+.hb-side .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hb-cap{background:var(--gold);padding:22px 24px;color:var(--green-deep)}
+.hb-cap b{font-family:var(--serif);font-weight:400;font-size:46px;line-height:1;display:block}
+.hb-cap span{font-weight:600;font-size:15px}
+.stamp{position:absolute;left:-28px;top:-62px;width:138px;height:138px;z-index:3;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== Sector index ===== */
+.sectors{padding:120px 0 110px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,4.4vw,58px);max-width:640px;margin-top:16px;color:var(--green-deep)}
+.sec-head p{max-width:380px;color:var(--mute)}
+.index{display:grid;grid-template-columns:1fr 430px;gap:50px;align-items:start}
+.index ol{list-style:none;border-top:1px solid var(--ink)}
+.index li{border-bottom:1px solid var(--line)}
+.index li button{all:unset;cursor:pointer;width:100%;display:grid;grid-template-columns:64px 1fr auto;align-items:center;padding:22px 6px;transition:.25s}
+.index li .n{font-size:13px;font-weight:700;color:var(--mute);letter-spacing:.08em}
+.index li .t{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);color:var(--ink);transition:.25s}
+.index li .k{font-size:13px;font-weight:600;color:var(--mute);text-align:right}
+.index li.on button,.index li button:hover{padding-left:18px;padding-right:0}
+.index li button{box-sizing:border-box}
+.index li.on .t{color:var(--green)}
+.index li.on .n{color:var(--gold)}
+.index li .d{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--mute);padding-left:70px;font-size:15.5px}
+.index li.on .d{max-height:120px;padding-bottom:22px}
+.viewer{position:sticky;top:110px}
+.viewer .frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:28px 28px 28px 0;background:var(--paper-2)}
+.viewer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .5s,transform .8s}
+.viewer img.on{opacity:1;transform:scale(1)}
+.viewer .lbl{position:absolute;left:0;bottom:0;background:var(--paper);padding:14px 20px 0 0;font-size:13.5px;font-weight:700;color:var(--green);border-radius:0 18px 0 0}
+.viewer .lbl i{font-style:normal;color:var(--mute);font-weight:500}
+
+/* ===== Story ===== */
+.story{background:var(--green-deep);color:#e7efed;padding:120px 0;position:relative;overflow:hidden}
+.story::before{content:"2007";position:absolute;right:-30px;top:30px;font-family:var(--serif);font-size:300px;line-height:1;color:rgba(255,255,255,.035);pointer-events:none}
+.story .eyebrow{color:var(--gold-soft)}
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.story-photo{position:relative}
+.story-photo .ph{overflow:hidden;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;aspect-ratio:1/1.05;border:8px solid var(--green)}
+.story-photo .ph{border-radius:160px 24px 160px 24px}
+.story-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.story-photo .chip{position:absolute;right:-22px;bottom:40px;background:var(--gold);color:var(--green-deep);padding:16px 20px;border-radius:14px;font-weight:700;font-size:14.5px;line-height:1.35;max-width:210px}
+.story h2{font-size:clamp(34px,4vw,54px);color:#fff;margin:18px 0 40px}
+.story h2 span{color:var(--gold)}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),rgba(240,185,40,.15))}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item::before{content:"";position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--green-deep);border:3px solid var(--gold)}
+.tl-item h4{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.tl-item p{font-size:19px;color:#e7efed}
+.goal{margin-top:10px;padding:24px 26px;border:1px dashed rgba(240,185,40,.55);border-radius:16px;font-family:var(--serif);font-size:24px;color:#fff}
+
+/* ===== Standards ===== */
+.standards{padding:110px 0}
+.std-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);margin-top:44px}
+.std{padding:40px 34px;position:relative;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.std+.std{border-left:1px solid var(--ink)}
+.std .ic{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:var(--gold-soft)}
+.std .ic svg{width:28px;height:28px;stroke:var(--green);fill:none;stroke-width:1.8}
+.std h3{font-size:30px;color:var(--green-deep);margin-top:34px}
+.std .big{font-family:var(--serif);font-size:88px;line-height:.9;color:var(--green)}
+.std.dark{background:var(--green);color:#fff}
+.std.dark h3,.std.dark .big{color:#fff}
+.std.dark .big sup{color:var(--gold);font-size:.45em;vertical-align:top}
+.std.dark .ic{background:rgba(255,255,255,.1)}
+.std.dark .ic svg{stroke:var(--gold)}
+.std-head{display:flex;justify-content:space-between;gap:40px;align-items:end;flex-wrap:wrap}
+.std-head h2{font-size:clamp(34px,4vw,54px);color:var(--green-deep);margin-top:16px;max-width:600px}
+
+/* ===== Clients ===== */
+.clients{padding:110px 0 120px;background:var(--paper-2)}
+.feat{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:14px;margin:46px 0 60px}
+.tile{position:relative;overflow:hidden;background:#cfc6b1}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.tile:hover img{transform:scale(1.05)}
+.tile .cap{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(245,240,228,.95);padding:10px 14px;border-radius:10px;font-size:13px;line-height:1.35}
+.tile .cap b{display:block;font-size:15px;color:var(--green-deep)}
+.t1{grid-column:span 5;grid-row:span 3;border-radius:24px 0 24px 24px}
+.t2{grid-column:span 4;grid-row:span 2;border-radius:0 24px 0 0}
+.t3{grid-column:span 3;grid-row:span 2;border-radius:24px}
+.t4{grid-column:span 3;grid-row:span 1;border-radius:24px 0 24px 0}
+.t5{grid-column:span 4;grid-row:span 1;border-radius:0 0 24px 24px}
+
+.ledger{width:100%;border-collapse:collapse;background:var(--paper);border-radius:20px;overflow:hidden}
+.ledger thead th{text-align:left;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#cfdcd8;background:var(--green);padding:16px 18px;font-weight:700}
+.ledger td{padding:16px 18px;border-top:1px solid var(--line);font-size:15px;vertical-align:middle}
+.ledger tr{transition:background .2s}
+.ledger tbody tr:hover{background:#fff}
+.ledger .no{font-weight:700;color:var(--mute);width:56px}
+.ledger .cl{display:flex;align-items:center;gap:14px}
+.ledger .th{width:54px;height:40px;border-radius:8px;overflow:hidden;flex:none;background:var(--paper-2);display:grid;place-items:center;font-family:var(--serif);color:var(--green);font-size:18px}
+.ledger .th img{width:100%;height:100%;object-fit:cover}
+.ledger .cl b{display:block;font-weight:700;color:var(--ink)}
+.ledger .cl small{color:var(--mute);font-size:13px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--gold-soft);color:#6a4d00;white-space:nowrap}
+.ledger a.web{color:var(--green);font-weight:600;border-bottom:1px solid var(--gold)}
+.ledger .who{color:var(--mute)}
+.ledger .who b{color:var(--ink);font-weight:600}
+
+/* ===== Visit / hours ===== */
+.visit{padding:110px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:30px;overflow:hidden;background:var(--green)}
+.v-info{padding:56px 52px;color:#e7efed}
+.v-info h2{font-size:clamp(34px,3.8vw,52px);color:#fff;margin:16px 0 30px}
+.v-info .eyebrow{color:var(--gold-soft)}
+.hours{border-top:1px solid rgba(255,255,255,.15)}
+.hours div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:17px}
+.hours div span:last-child{font-weight:700;color:#fff}
+.v-call{margin-top:34px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.v-call .num{font-family:var(--serif);font-size:38px;color:var(--gold);line-height:1}
+.v-call small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a9c2bd;margin-bottom:6px}
+.v-addr{margin-top:28px;font-size:16px;color:#cfdcd8;display:flex;gap:12px}
+.v-addr svg{flex:none;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8;margin-top:2px}
+.v-map{min-height:520px;position:relative}
+.v-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+
+/* ===== Footer ===== */
+footer{background:var(--green-deep);color:#a9c2bd;padding:80px 0 0}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px;padding-bottom:60px}
+footer .logo-text{color:#fff}
+footer .logo-text small{color:#a9c2bd}
+footer p{font-size:15px;margin-top:20px;max-width:320px}
+footer h5{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+footer ul a:hover{color:#fff}
+.f-big{font-family:var(--serif);font-size:clamp(60px,12vw,190px);line-height:.8;color:rgba(255,255,255,.06);letter-spacing:-.02em;white-space:nowrap;overflow:hidden;user-select:none}
+.f-bot{border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 0;font-size:14px}
+.f-bot a{color:var(--gold);font-weight:600}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media(max-width:1060px){
+  .hero-grid,.story-grid,.index,.visit-grid{grid-template-columns:1fr}
+  .viewer{display:none}
+  .story-grid{gap:60px}
+  .f-top{grid-template-columns:1fr 1fr}
+  .std-grid{grid-template-columns:1fr}
+  .std+.std{border-left:0;border-top:1px solid var(--ink)}
+  .ledger .hide-m{display:none}
+}
+@media(max-width:820px){
+  nav,.hdr-cta .btn{display:none}
+  .burger{display:block}
+  nav.open{display:block;position:absolute;top:78px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:18px 4vw}
+  nav.open ul{flex-direction:column;gap:14px}
+  .hero-band{grid-template-columns:1fr}
+  .hb-main{height:300px}
+  .hb-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .stamp{width:100px;height:100px;left:auto;right:10px;top:-50px}
+  .feat{grid-auto-rows:120px}
+  .t1,.t2,.t3,.t4,.t5{grid-column:span 12;grid-row:span 2}
+  .f-row{grid-template-columns:1fr}
+  .v-info{padding:40px 26px}
+  .strip span+span{margin-left:0}
+  .strip .wrap{flex-direction:column;gap:2px}
+  .ledger td,.ledger th{padding:12px 10px}
+  .ledger .hide-s{display:none}
+  .story-photo .chip{right:10px}
+}
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="wrap">
+    <div><span>Call or Text <b>403.813.4830</b></span></div>
+    <div><span>Mon to Fri: 10:00 am to 08:00 pm</span> <span>Sat to Sun: 11:00 am to 08:00 pm</span></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Servbond home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="9" width="20" height="20" rx="6" fill="none" stroke="#1d4843" stroke-width="4.5"/><rect x="17" y="11" width="20" height="20" rx="6" fill="none" stroke="#f0b928" stroke-width="4.5"/></svg>
+      <span class="logo-text">Servbond<small>Cleaning · Calgary</small></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#" class="on">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hdr-cta">
+      <a href="#quote" class="btn btn-gold">Get a Quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="rv">
+        <span class="eyebrow">Calgary cleaning company · Since May 2007</span>
+        <h1>Our main goal is to make <em>you,</em> our customer, happy.</h1>
+        <p class="lead">Commercial and residential cleaning for gyms, medical clinics, dental offices, kitchens, warehouses and offices across Calgary, done by a 40+ team of Filipino families and people from diverse backgrounds.</p>
+        <div class="hero-tags">
+          <a href="#services" data-go="0">Gyms</a>
+          <a href="#services" data-go="1">Medical Clinics</a>
+          <a href="#services" data-go="2">Dental Offices</a>
+          <a href="#services" data-go="3">Kitchens</a>
+          <a href="#services" data-go="4">Warehouses</a>
+          <a href="#services" data-go="5">Offices</a>
+          <a href="#services" data-go="6">Residential</a>
+        </div>
+      </div>
+
+      <form class="quote rv" id="quote" onsubmit="event.preventDefault();this.querySelector('.form-ok').style.display='block';this.reset();">
+        <span class="ticket">Free Quote</span>
+        <h3>Request a cleaning quote</h3>
+        <p class="s">Tell us about your space and we will get back to you as soon as possible.</p>
+        <div class="f-row">
+          <div class="field"><label for="q-name">Name*</label><input id="q-name" required></div>
+          <div class="field"><label for="q-mail">E-mail*</label><input id="q-mail" type="email" required></div>
+        </div>
+        <div class="field"><label for="q-type">Type of space</label>
+          <select id="q-type">
+            <option>Gym</option><option>Medical clinic</option><option>Dental office</option><option>Kitchen</option><option>Warehouse</option><option>Office</option><option>Residential</option>
+          </select>
+        </div>
+        <div class="field"><label for="q-msg">Message</label><textarea id="q-msg"></textarea></div>
+        <button class="btn btn-gold" type="submit">Send Request →</button>
+        <div class="form-ok">Thank you! We will get back to you as soon as possible.</div>
+        <p class="or">Prefer to talk? Call or text <a href="tel:4038134830">403.813.4830</a></p>
+      </form>
+    </div>
+
+    <div class="hero-band rv">
+      <svg class="stamp" viewBox="0 0 140 140" aria-hidden="true">
+        <circle cx="70" cy="70" r="68" fill="#f0b928"/>
+        <defs><path id="c" d="M70,70 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+        <text font-family="Figtree" font-weight="800" font-size="12" fill="#10302c"><textPath href="#c" textLength="306" lengthAdjust="spacing">SERVBOND · CALGARY · EST. MAY 2007 ·</textPath></text>
+        <rect x="47" y="58" width="26" height="26" rx="7" fill="none" stroke="#10302c" stroke-width="5"/><rect x="66" y="56" width="26" height="26" rx="7" fill="none" stroke="#fff" stroke-width="5"/>
+      </svg>
+      <div class="hb-main"><img src="images/team-cleaning-kitchen.jpg" alt="Servbond team cleaning a kitchen and dining area"></div>
+      <div class="hb-side">
+        <div class="ph"><img src="images/servbond-team.jpg" alt="Servbond team members in uniform"></div>
+        <div class="hb-cap"><b>40+</b><span>Team of Filipino families and people from diverse backgrounds</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES INDEX ===== -->
+<section class="sectors" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Services</span><h2>Who we clean for, commercial and residential.</h2></div>
+      <p>Pick a space below to see the kind of places our team already keeps clean around Calgary.</p>
+    </div>
+    <div class="index">
+      <ol id="idx">
+        <li class="on"><button><span class="n">01</span><span class="t">Gyms</span><span class="k">Crossfit Calgary</span></button><p class="d">Commercial cleaning for gyms and training spaces, with complete cleaning equipment.</p></li>
+        <li><button><span class="n">02</span><span class="t">Medical Clinics</span><span class="k">New Brighton · McKenzie Towne</span></button><p class="d">Cleaning for medical clinics following our standard cleaning procedures.</p></li>
+        <li><button><span class="n">03</span><span class="t">Dental Offices</span><span class="k">Forest Lawn Dental Centre</span></button><p class="d">Cleaning for dental offices and patient areas.</p></li>
+        <li><button><span class="n">04</span><span class="t">Kitchens</span><span class="k">Bow Valley Kitchen</span></button><p class="d">Cleaning for kitchens and kitchen showrooms.</p></li>
+        <li><button><span class="n">05</span><span class="t">Warehouses</span><span class="k">BEHR · TAS · Fleet Brake</span></button><p class="d">Cleaning for warehouses, distribution and repair facilities.</p></li>
+        <li><button><span class="n">06</span><span class="t">Offices</span><span class="k">Creative Interiors · Applied Physics</span></button><p class="d">Cleaning for offices, showrooms and studios.</p></li>
+        <li><button><span class="n">07</span><span class="t">Residential</span><span class="k">Homes in Calgary</span></button><p class="d">Residential cleaning by the same team and the same standard procedures.</p></li>
+      </ol>
+      <div class="viewer">
+        <div class="frame" id="vf">
+          <img class="on" src="images/crossfit-calgary.jpg" alt="Gym">
+          <img src="images/new-brighton-medical.jpg" alt="Medical clinic">
+          <img src="images/forest-lawn-dental.jpg" alt="Dental office">
+          <img src="images/bow-valley-kitchen.jpg" alt="Kitchen">
+          <img src="images/behr-canada.png" alt="Warehouse">
+          <img src="images/creative-interiors.jpg" alt="Office">
+          <img src="images/team-cleaning-kitchen.jpg" alt="Residential cleaning">
+          <div class="lbl" id="vl">Gyms <i>· Crossfit Calgary</i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story">
+  <div class="wrap story-grid">
+    <div class="story-photo rv">
+      <div class="ph"><img src="images/servbond-team.jpg" alt="Servbond cleaning team"></div>
+      <div class="chip">A Calgary company built by Filipino families</div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Our Story</span>
+      <h2>From one new arrival in Calgary to a <span>40+</span> person team.</h2>
+      <div class="tl">
+        <div class="tl-item"><h4>2005</h4><p>Darbie Layos, a Filipino immigrant, arrived in Calgary from the Philippines.</p></div>
+        <div class="tl-item"><h4>May 2007</h4><p>He started this cleaning company.</p></div>
+        <div class="tl-item"><h4>Now</h4><p>We have a 40+ team of Filipino families and people from diverse backgrounds.</p></div>
+      </div>
+      <div class="goal">"Our main goal is to make you, our customer, happy!"</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STANDARDS ===== -->
+<section class="standards">
+  <div class="wrap">
+    <div class="std-head rv">
+      <div><span class="eyebrow">Meet the Team</span><h2>What every Servbond clean comes with.</h2></div>
+    </div>
+    <div class="std-grid rv">
+      <div class="std">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11"/><path d="M3.5 5.5l1.5 1.5 2.5-3M3.5 12.5l1.5 1.5 2.5-3M3.5 19.5l1.5 1.5 2.5-3"/></svg></div>
+        <h3>Standard cleaning procedures</h3>
+      </div>
+      <div class="std dark">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><div class="big">17<sup>+</sup></div><h3 style="margin-top:12px">Years of experience</h3></div>
+      </div>
+      <div class="std">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3l7 7-4 4-7-7z"/><path d="M10 7l-6 6a2.8 2.8 0 004 4l6-6"/><path d="M3 21l3-3"/></svg></div>
+        <h3>A complete cleaning equipment</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="eyebrow">Our Clients</span><h2>Businesses across Calgary trust Servbond.</h2></div>
+      <p>Gyms, clinics, dental offices, kitchens, warehouses and offices. Here are some of the places we clean.</p>
+    </div>
+
+    <div class="feat rv">
+      <a class="tile t1" href="https://crossfitcalgary.ca" target="_blank" rel="noopener"><img src="images/crossfit-calgary.jpg" alt="Crossfit Calgary Gym"><div class="cap"><b>Crossfit Calgary Gym</b>Crowfoot Way NW</div></a>
+      <a class="tile t2" href="https://forestlawndentalcentre.ca" target="_blank" rel="noopener"><img src="images/forest-lawn-dental.jpg" alt="Forest Lawn Dental Centre"><div class="cap"><b>Forest Lawn Dental Centre</b>17 Ave. SE</div></a>
+      <a class="tile t3" href="https://bowvalleykitchens.ca" target="_blank" rel="noopener"><img src="images/bow-valley-kitchen.jpg" alt="Bow Valley Kitchen"><div class="cap"><b>Bow Valley Kitchen</b>58 Ave. SE</div></a>
+      <a class="tile t4" href="https://behr.com" target="_blank" rel="noopener"><img src="images/behr-canada.png" alt="BEHR Canada"><div class="cap"><b>BEHR Canada</b>Barlow Square SE</div></a>
+      <a class="tile t5" href="https://creativeinteriorscalgary.com" target="_blank" rel="noopener"><img src="images/creative-interiors.jpg" alt="Creative Interiors"><div class="cap"><b>Creative Interiors</b>Macleod Tr. S.E.</div></a>
+    </div>
+
+    <table class="ledger rv">
+      <thead><tr><th>#</th><th>Client</th><th class="hide-s">Type</th><th class="hide-m">Contact</th><th class="hide-s">Website</th></tr></thead>
+      <tbody>
+        <tr><td class="no">01</td><td><div class="cl"><span class="th"><img src="images/crossfit-calgary.jpg" alt=""></span><div><b>Crossfit Calgary Gym</b><small>17 141 Crowfoot Way NW, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Gym</span></td><td class="hide-m who"><b>Brett Marshall</b>, Owner</td><td class="hide-s"><a class="web" href="https://crossfitcalgary.ca" target="_blank" rel="noopener">crossfitcalgary.ca</a></td></tr>
+        <tr><td class="no">02</td><td><div class="cl"><span class="th"><img src="images/new-brighton-medical.jpg" alt=""></span><div><b>New Brighton Medical Clinic</b><small>Primary Care Network South Calgary</small></div></div></td><td class="hide-s"><span class="tag">Medical Clinic</span></td><td class="hide-m who"><b>Lisa Larose</b>, Manager</td><td class="hide-s"><a class="web" href="https://newbrightonmedical.com" target="_blank" rel="noopener">newbrightonmedical.com</a></td></tr>
+        <tr><td class="no">03</td><td><div class="cl"><span class="th"><img src="images/forest-lawn-dental.jpg" alt=""></span><div><b>Forest Lawn Dental Centre</b><small>3617 17 Ave. SE, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Dental Office</span></td><td class="hide-m who"><b>Pinder Sandu</b>, Owner</td><td class="hide-s"><a class="web" href="https://forestlawndentalcentre.ca" target="_blank" rel="noopener">forestlawndentalcentre.ca</a></td></tr>
+        <tr><td class="no">04</td><td><div class="cl"><span class="th"><img src="images/bow-valley-kitchen.jpg" alt=""></span><div><b>Bow Valley Kitchen</b><small>7 700 58 Ave. SE, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Kitchen</span></td><td class="hide-m who"><b>Frank Funk</b>, Owner</td><td class="hide-s"><a class="web" href="https://bowvalleykitchens.ca" target="_blank" rel="noopener">bowvalleykitchens.ca</a></td></tr>
+        <tr><td class="no">05</td><td><div class="cl"><span class="th"><img src="images/creative-interiors.jpg" alt=""></span><div><b>Creative Interiors</b><small>630 12100 Macleod Tr. S.E., Calgary</small></div></div></td><td class="hide-s"><span class="tag">Office / Showroom</span></td><td class="hide-m who"><b>Shirley Cook</b>, Owner</td><td class="hide-s"><a class="web" href="https://creativeinteriorscalgary.com" target="_blank" rel="noopener">creativeinteriorscalgary.com</a></td></tr>
+        <tr><td class="no">06</td><td><div class="cl"><span class="th"><img src="images/behr-canada.png" alt=""></span><div><b>BEHR Canada</b><small>100 600 Barlow Square SE, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Warehouse</span></td><td class="hide-m who"><b>Tara Dobroski</b>, Manager</td><td class="hide-s"><a class="web" href="https://behr.com" target="_blank" rel="noopener">behr.com</a></td></tr>
+        <tr><td class="no">07</td><td><div class="cl"><span class="th"><img src="images/fleet-brake.jpg" alt=""></span><div><b>Fleet Brake</b><small>Trucking Repairs · 7707 54 Street S.E.</small></div></div></td><td class="hide-s"><span class="tag">Warehouse</span></td><td class="hide-m who"><b>Dave Peters</b>, Operations Manager</td><td class="hide-s"><a class="web" href="https://fleetbrake.com" target="_blank" rel="noopener">fleetbrake.com</a></td></tr>
+        <tr><td class="no">08</td><td><div class="cl"><span class="th"><img src="images/tas-refrigerated.jpg" alt=""></span><div><b>TAS Refrigerated Distribution</b><small>4060 78 Ave. SE, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Warehouse</span></td><td class="hide-m who"><b>Dennis Lywood</b>, Manager</td><td class="hide-s"><a class="web" href="https://tas-refrig.com" target="_blank" rel="noopener">Tas-Refrig.com</a></td></tr>
+        <tr><td class="no">09</td><td><div class="cl"><span class="th">A</span><div><b>Adria Contract Seating</b><small>Furnitures · Unit K 7004 5 Street S.E.</small></div></div></td><td class="hide-s"><span class="tag">Office / Showroom</span></td><td class="hide-m who"><b>Dan Taylor</b>, Owner</td><td class="hide-s"><a class="web" href="https://adriachairs.com" target="_blank" rel="noopener">adriachairs.com</a></td></tr>
+        <tr><td class="no">10</td><td><div class="cl"><span class="th"><img src="images/applied-physics.jpg" alt=""></span><div><b>Applied Physics</b><small>10099 15 St NE, Calgary</small></div></div></td><td class="hide-s"><span class="tag">Office</span></td><td class="hide-m who"><b>Dwayne Bakaas</b>, Manager</td><td class="hide-s"><a class="web" href="https://appliedphysics.com" target="_blank" rel="noopener">appliedphysics.com</a></td></tr>
+        <tr><td class="no">11</td><td><div class="cl"><span class="th"><img src="images/redemption-audio.jpg" alt=""></span><div><b>Redemption Audio</b><small>932 17 Ave. S.W., Calgary</small></div></div></td><td class="hide-s"><span class="tag">Studio</span></td><td class="hide-m who"><b>Mitch Lee</b>, Owner</td><td class="hide-s"><a class="web" href="https://redemptionaudio.com" target="_blank" rel="noopener">redemptionaudio.com</a></td></tr>
+        <tr><td class="no">12</td><td><div class="cl"><span class="th"><img src="images/mckenzie-towne-medical.jpg" alt=""></span><div><b>McKenzie Towne Medical</b><small>Primary Care Network South Calgary</small></div></div></td><td class="hide-s"><span class="tag">Medical Clinic</span></td><td class="hide-m who"><b>Paul Tung</b>, Owner</td><td class="hide-s"><a class="web" href="https://mckenziefamilypractice.ca" target="_blank" rel="noopener">mckenziefamilypractice.ca</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="visit" id="contact">
+  <div class="wrap">
+    <div class="visit-grid rv">
+      <div class="v-info">
+        <span class="eyebrow">Business Hours</span>
+        <h2>Call, text or drop by. Open seven days a week.</h2>
+        <div class="hours">
+          <div><span>Mon to Fri</span><span>10:00 am to 08:00 pm</span></div>
+          <div><span>Sat to Sun</span><span>11:00 am to 08:00 pm</span></div>
+        </div>
+        <div class="v-call">
+          <div><small>Call or Text</small><a class="num" href="tel:4038134830">403.813.4830</a></div>
+          <a href="#quote" class="btn btn-gold" style="margin-left:auto">Get a Quote</a>
+        </div>
+        <div class="v-addr">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span>4121 23 B NorthEast, Calgary, Alberta, Canada T2E 7V9</span>
+        </div>
+      </div>
+      <div class="v-map">
+        <iframe title="Servbond location map" loading="lazy" src="https://maps.google.com/maps?q=4121%2023B%20St%20NE%20Calgary%20AB%20T2E%207V9&z=14&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a href="#" class="logo">
+          <svg viewBox="0 0 40 40" aria-hidden="true" style="width:42px;height:42px"><rect x="3" y="9" width="20" height="20" rx="6" fill="none" stroke="#fff" stroke-width="4.5"/><rect x="17" y="11" width="20" height="20" rx="6" fill="none" stroke="#f0b928" stroke-width="4.5"/></svg>
+          <span class="logo-text">Servbond<small>Cleaning · Calgary</small></span>
+        </a>
+        <p>Commercial and residential cleaning in Calgary since May 2007. Our main goal is to make you, our customer, happy!</p>
+      </div>
+      <div>
+        <h5>Menu</h5>
+        <ul><li><a href="#">Home</a></li><li><a href="#services">Services</a></li><li><a href="#clients">Our Clients</a></li><li><a href="#contact">Contact Us</a></li></ul>
+      </div>
+      <div>
+        <h5>Business Hours</h5>
+        <ul><li>Mon to Fri<br>10:00 am to 08:00 pm</li><li>Sat to Sun<br>11:00 am to 08:00 pm</li></ul>
+      </div>
+      <div>
+        <h5>Contact Us</h5>
+        <ul><li><a href="tel:4038134830">Call or Text 403.813.4830</a></li><li>4121 23 B NorthEast, Calgary, Alberta, Canada T2E 7V9</li></ul>
+      </div>
+    </div>
+    <div class="f-big">Servbond</div>
+    <div class="f-bot">
+      <span>© <span id="yr">2026</span> Servbond. All rights reserved.</span>
+      <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// services index
+const items=[...document.querySelectorAll('#idx li')],imgs=[...document.querySelectorAll('#vf img')],lbl=document.getElementById('vl');
+function pick(i){items.forEach((li,j)=>li.classList.toggle('on',j===i));imgs.forEach((im,j)=>im.classList.toggle('on',j===i));
+  const li=items[i];lbl.innerHTML=li.querySelector('.t').textContent+' <i>· '+li.querySelector('.k').textContent+'</i>';}
+items.forEach((li,i)=>{li.querySelector('button').addEventListener('click',()=>pick(i));li.addEventListener('mouseenter',()=>{if(matchMedia('(min-width:1061px)').matches)pick(i)});});
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>pick(+a.dataset.go)));
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
